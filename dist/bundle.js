@@ -109,27 +109,33 @@
 	__webpack_require__(461);
 	__webpack_require__(463);
 
-	// Initialize Firebase
-	var fireConfig = {
-	  apiKey: "AIzaSyAWyScryVqNNRjXOGa5aGiV3BAZK65y-WM",
-	  authDomain: "ijcup2016.firebaseapp.com",
-	  databaseURL: "https://ijcup2016.firebaseio.com",
-	  storageBucket: "ijcup2016.appspot.com"
-	};
+	var password = prompt('MASUKAN PASWORD ADMIN', '');
 
-	firebase.initializeApp(fireConfig);
+	if (password != 'Irjen!CUP16') {
+	  document.write('KAMU TIDAK BOLEH MENGAKSES HALAMAN INI');
+	} else {
+	  // Initialize Firebase
+	  var fireConfig = {
+	    apiKey: "AIzaSyAWyScryVqNNRjXOGa5aGiV3BAZK65y-WM",
+	    authDomain: "ijcup2016.firebaseapp.com",
+	    databaseURL: "https://ijcup2016.firebaseio.com",
+	    storageBucket: "ijcup2016.appspot.com"
+	  };
 
-	// Get a reference to the database service
-	window.database = firebase.database();
-	window.storageBase = firebase.storage();
-	window.Swal = _sweetalert2.default;
-	window._ = _lodash2.default;
-	window.config = _app2.default;
-	window.firepath = _app2.default.firepath;
-	window.Loading = _Loading2.default;
-	window.Modal = _reactModal2.default;
+	  firebase.initializeApp(fireConfig);
 
-	(0, _reactDom.render)(_react2.default.createElement(_Root2.default, { store: store, routes: _index2.default, history: _reactRouter.hashHistory }), rootElement);
+	  // Get a reference to the database service
+	  window.database = firebase.database();
+	  window.storageBase = firebase.storage();
+	  window.Swal = _sweetalert2.default;
+	  window._ = _lodash2.default;
+	  window.config = _app2.default;
+	  window.firepath = _app2.default.firepath;
+	  window.Loading = _Loading2.default;
+	  window.Modal = _reactModal2.default;
+
+	  (0, _reactDom.render)(_react2.default.createElement(_Root2.default, { store: store, routes: _index2.default, history: _reactRouter.hashHistory }), rootElement);
+	}
 
 /***/ },
 /* 2 */
@@ -27909,28 +27915,7 @@
 	              )
 	            )
 	          ),
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'nav navbar-nav navbar-right' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'a',
-	                { href: '#/kelola/tim' },
-	                'Kelola Tim'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'a',
-	                { href: '#/kelola/pertandingan' },
-	                'Kelola Pertandingan'
-	              )
-	            )
-	          )
+	          _react2.default.createElement('ul', { className: 'nav navbar-nav navbar-right' })
 	        )
 	      )
 	    ),

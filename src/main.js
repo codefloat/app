@@ -21,25 +21,33 @@ let firebase = require("firebase/app");
   require("firebase/database");
   require("firebase/storage");
 
+let password = prompt('MASUKAN PASWORD ADMIN', '')
 
-// Initialize Firebase
-var fireConfig = {
-  apiKey: "AIzaSyAWyScryVqNNRjXOGa5aGiV3BAZK65y-WM",
-  authDomain: "ijcup2016.firebaseapp.com",
-  databaseURL: "https://ijcup2016.firebaseio.com",
-  storageBucket: "ijcup2016.appspot.com",
-};
+if(password != 'Irjen!CUP16'){
+  document.write('KAMU TIDAK BOLEH MENGAKSES HALAMAN INI')
+}
 
-firebase.initializeApp(fireConfig);
+  else {
+  // Initialize Firebase
+  var fireConfig = {
+    apiKey: "AIzaSyAWyScryVqNNRjXOGa5aGiV3BAZK65y-WM",
+    authDomain: "ijcup2016.firebaseapp.com",
+    databaseURL: "https://ijcup2016.firebaseio.com",
+    storageBucket: "ijcup2016.appspot.com",
+  };
 
-// Get a reference to the database service
-window.database = firebase.database();
-window.storageBase = firebase.storage();
-window.Swal = Swal;
-window._ = _
-window.config = config;
-window.firepath = config.firepath
-window.Loading = Loading
-window.Modal = Modal
+  firebase.initializeApp(fireConfig);
 
-render(<Root store={store} routes={routes} history={hashHistory}  />, rootElement)
+  // Get a reference to the database service
+  window.database = firebase.database();
+  window.storageBase = firebase.storage();
+  window.Swal = Swal;
+  window._ = _
+  window.config = config;
+  window.firepath = config.firepath
+  window.Loading = Loading
+  window.Modal = Modal
+
+  render(<Root store={store} routes={routes} history={hashHistory}  />, rootElement)
+
+}
