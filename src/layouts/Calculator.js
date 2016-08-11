@@ -31,6 +31,9 @@ export default function CalculatorLayout({children}){
 
             </ul>
             <ul className="nav navbar-nav navbar-right">
+              <li><a href="#/kelola/tim"> Kelola Tim <span className="sr-only"></span></a></li>
+              <li><a href="#/kelola/pertandingan"> Kelola Pertandingan <span className="sr-only"></span></a></li>
+
             </ul>
           </div>
         </div>
